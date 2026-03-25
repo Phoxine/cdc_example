@@ -4,6 +4,7 @@
 
 Changed Data Capture (CDC) is a technique used to track and capture changes made to data in a database. It allows you to identify and capture insertions, updates, and deletions of data in real-time or near real-time. CDC is commonly used for data replication, data warehousing, and real-time analytics.
 
+you can see more information about CDC in the following [links](https://debezium.io/documentation/reference/stable/tutorial.html#considerations-running-debezium-docker)
 
 ## setup
 
