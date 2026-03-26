@@ -4,7 +4,7 @@
 
 Changed Data Capture (CDC) is a technique used to track and capture changes made to data in a database. It allows you to identify and capture insertions, updates, and deletions of data in real-time or near real-time. CDC is commonly used for data replication, data warehousing, and real-time analytics.
 
-you can see more information about CDC in the following [links](https://debezium.io/documentation/reference/stable/tutorial.html#considerations-running-debezium-docker)
+you can see more information about CDC in this [links](https://debezium.io/documentation/reference/stable/tutorial.html#considerations-running-debezium-docker)
 
 ## setup
 
@@ -74,7 +74,7 @@ curl -X POST http://localhost:8083/connectors \
 ```
 
 
-### run insert users sql via pgweb
+### execute insert users sql via pgweb
 ```
 INSERT INTO users (id, name, created_data, is_active)
 VALUES (
@@ -153,11 +153,12 @@ Elasticsearch / ClickHouse
 
 ### Elasticsearch
 
+[information](https://debezium.io/blog/2018/01/17/streaming-to-elasticsearch/)
 
 add the following code to the compose.yaml file to start an elasticsearch container
 ```
 elasticsearch:
-  image: docker.elastic.co/elasticsearch/elasticsearch:8.13.0
+  image: docker.io/library/elasticsearch:9.3.2
   environment:
     - discovery.type=single-node
     - xpack.security.enabled=false

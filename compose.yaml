@@ -51,6 +51,13 @@ services:
       STATUS_STORAGE_TOPIC: my_connect_statuses
     depends_on:
       - broker
+  elasticsearch:
+    image: docker.io/library/elasticsearch:9.3.2
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+    ports:
+      - "9200:9200"
 volumes:
     db-data:
   
